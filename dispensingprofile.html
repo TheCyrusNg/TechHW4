@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script defer src="fontawesome/js/all.js"></script>
+    <title>Cyrus Ng</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            font-family: 'monospace', 'monospace';
+            scroll-behavior: smooth;
+        }
+
+        .faded {
+            opacity: 0.8
+        }
+
+        .landing {
+            min-height: 100%;
+            min-height: calc(100% - 56px);
+            padding-top: 56px;
+        }
+
+        .btn-outline {
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+            opacity: 0.5;
+            transition: 0.3s;
+
+        }
+
+        .btn-outline:hover {
+            opacity: 1;
+        }
+
+        .lang {
+            height: 60px;
+            transition: 0.3s;
+        }
+
+        .contacticon {
+            font-size: 65px;
+        }
+
+        .contacticon a {
+            color: rgb(33, 37, 41);
+        }
+
+        .course {
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #eeeeee;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .course h5 {
+            margin: 0;
+        }
+
+        .next {
+            font-size: 65px;
+        }
+
+        .next a {
+            color: rgb(33, 37, 41);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="file:///C:/Users/cyrus/OneDrive/Documents/GitHub/TechHW4/index.html">Pet Med System<span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/cyrus/OneDrive/Documents/GitHub/TechHW4/owner.html">Owner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/cyrus/OneDrive/Documents/GitHub/TechHW4/vet.html">Vet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/cyrus/OneDrive/Documents/GitHub/TechHW4/dispensingrequests.html">Dispensing Department Requests</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///C:/Users/cyrus/OneDrive/Documents/GitHub/TechHW4/dispensingprofile.html">Dispensing Department Pet Profile</a>
+                </li>                         
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div class="container-fluid">
+            <h3 class="text-dark mb-4">Pet Profile</h3>
+            <div class="card shadow mb-3">
+                <div class="card-header py-3">
+                    <p class="text-primary m-0 fw-bold">Pet Settings</p>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row" style="margin-bottom: 25px;text-align: left;">
+                            <div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 col-xxl-2" style="display: inline;text-align: center;margin-bottom: 25px;"><img class="rounded-circle mb-3 mt-4 img-fluid" src="dogs/image2.jpeg" style="display: inline;max-height: 110px;" /><br /><button id="photoBtn" class="btn btn-primary btn-sm" type="button">Change Photo</button></div>
+                            <div class="col-sm-8 col-md-8 col-lg-9 col-xl-10 col-xxl-10 align-self-center">
+                                <div class="row">
+                                    <div class="col-md-12 text-start">
+                                        <div class="mb-3"><label class="form-label" for="email"><strong>Email Address</strong></label><input id="email" class="form-control" type="email" placeholder="user@example.com" name="email" required /></div>
+                                    </div>
+                                    <div class="col-md-12 text-start">
+                                        <div class="mb-3"><label class="form-label" for="username"><strong>Pet Name</strong></label><input class="form-control" type="text" placeholder="Username" name="username" required /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3"><label class="form-label" for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="John" name="first_name" required /></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3"><label class="form-label" for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="Doe" name="last_name" required /></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3"><label class="form-label" for="country"><strong>Country</strong></label><select id="countryId" class="form-select countries order-alpha limit-pop-1000000 presel-MX group-continents group-order-na" name="country" required></select></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3"><label class="form-label" for="city"><strong>State</strong></label><select id="stateId" class="form-select states order-alpha" name="state" required></select></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3"><label class="form-label" for="city"><strong>City</strong></label><input id="cityId" class="form-control" type="text" placeholder="Los Angeles" name="city" required /></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3"><label class="form-label" for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="Sunset Blvd, 38" name="address" /></div>
+                            </div>
+                            <div class="col-md-6 col-lg-12">
+                                <div class="mb-3"><label class="form-label" for="address"><strong>Medical History</strong></label><input class="form-control" type="text"  name="address" /></div>
+                            </div>
+                            <div class="col">
+                                <p id="emailErrorMsg" class="text-danger" style="display: none;"></p>
+                                <p id="passwordErrorMsg" class="text-danger" style="display: none;"></p>
+                            </div>
+                            <div class="col-md-12" style="text-align: right;margin-top: 5px;"><button id="submitBtn" class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>
